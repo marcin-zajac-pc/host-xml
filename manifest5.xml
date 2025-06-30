@@ -1,37 +1,35 @@
-<manifest type="isf" version="2.0">
+<manifest type="isf" version="1">
 <url>
 https://b3e5-46-112-104-75.ngrok-free.app
 </url>
-<additional_parameters>
-<products>
-[iai:foreach_products_list-begin]
-<product>
-<name>
-<![CDATA[ [iai:product_name] ]]>
-</name>
-<price>[iai:product_price_gross]</price>
-<url>
-<![CDATA[ [iai:product_url] ]]>
-</url>
-<weight>[iai:product_weight_kg]</weight>
-<quantity>[iai:product_quantity]</quantity>
-<product_code>[iai:product_code]</product_code>
-</product>
-[iai:foreach_products_list-end]
-</products>
-<order_currency>[iai:order_currency]</order_currency>
-<client_province>[iai:client_province]</client_province>
-<order_worth>[iai:order_worth]</order_worth>
-<is_dangerous>[courier_config:isDangerous]</is_dangerous>
-<collection_days_from>[courier_config:collectionDays]</collection_days_from>
-</additional_parameters>
-<config>
-<option type="input" id="collectionDays" name="Przy generowaniu etykiety do daty nadania zawsze dodawaj ustaloną liczbę dni"> </option>
-<option type="radio" id="isDangerous" name="Przesyłka zawiera towary niebezpieczne?">
-<values>
-<value name="Tak">yes</value>
-<value name="Nie">no</value>
-</values>
-</option>
-</config>
+    <additional_parameters>
+        <!-- Podstawowe informacje o zamówieniu -->
+        <shop_order_number>[iai:shop_order_sn]</shop_order_number>
+        <order_date>[iai:order_date]</order_date>
+
+        <!-- Waga paczki -->
+        <package_weight_grams>[iai:order_shipping_weight]</package_weight_grams>
+
+        <!-- Dodatkowe informacje -->
+        <parcel_number>[iai:delivery_parcel_number]</parcel_number>
+        <delivery_cost>[iai:delivery_cost]</delivery_cost>
+        <client_remarks><![CDATA[ [iai:client_remarks] ]]></client_remarks>
+        <order_worth>[iai:order_worth]</order_worth>
+        <order_worth_currency>[iai:order_worth_currency]</order_worth_currency>
+
+        <!-- Lista produktów -->
+        <!-- <products>
+            [iai:foreach_products_list-begin]
+            <product>
+                <id>[iai:product_id]</id>
+                <name><![CDATA[ [iai:product_name] ]]></name>
+                <code>[iai:product_code]</code>
+                <quantity>[iai:product_quantity]</quantity>
+                <price_gross_pln>[iai:product_price]</price_gross_pln>
+            </product>
+            [iai:foreach_products_list-end]
+        </products> -->
+    
+        
+    </additional_parameters>
 </manifest>
