@@ -1,35 +1,10 @@
-<manifest type="isf" version="1">
-<url>
-https://b3e5-46-112-104-75.ngrok-free.app
-</url>
-    <additional_parameters>
-        <!-- Podstawowe informacje o zamówieniu -->
-        <shop_order_number>[iai:shop_order_sn]</shop_order_number>
-        <order_date>[iai:order_date]</order_date>
-
-        <!-- Waga paczki -->
-        <package_weight_grams>[iai:order_shipping_weight]</package_weight_grams>
-
-        <!-- Dodatkowe informacje -->
-        <parcel_number>[iai:delivery_parcel_number]</parcel_number>
-        <delivery_cost>[iai:delivery_cost]</delivery_cost>
-        <client_remarks><![CDATA[ [iai:client_remarks] ]]></client_remarks>
-        <order_worth>[iai:order_worth]</order_worth>
-        <order_worth_currency>[iai:order_worth_currency]</order_worth_currency>
-
-        <!-- Lista produktów -->
-        <!-- <products>
-            [iai:foreach_products_list-begin]
-            <product>
-                <id>[iai:product_id]</id>
-                <name><![CDATA[ [iai:product_name] ]]></name>
-                <code>[iai:product_code]</code>
-                <quantity>[iai:product_quantity]</quantity>
-                <price_gross_pln>[iai:product_price]</price_gross_pln>
-            </product>
-            [iai:foreach_products_list-end]
-        </products> -->
+<manifest type="isf" version="1.0.0">
+    <url>https://scansort.dev.goodspeed.pl/api/v1/parcels/isf</url>
     
-        
+    <additional_parameters>
+        <order_date>[iai:order_date]</order_date>
+        <comments><![CDATA[ [iai:delivery_note] ]]></comments>
+        <order_worth>[iai:order_worth]</order_worth>
+        <delivery_type>MORNING</delivery_type>
     </additional_parameters>
 </manifest>
