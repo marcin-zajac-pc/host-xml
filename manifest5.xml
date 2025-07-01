@@ -1,5 +1,5 @@
 <manifest type="isf" version="1.0.0">
-    <url>https://scansort.dev.goodspeed.pl/api/v1/parcels/isf</url>
+    <url>https://scansort.dev.goodspeed.pl/ecommerce/api/v1/parcels/isf</url>
     
     <additional_parameters>
         <order_date>[iai:order_date]</order_date>
