@@ -5,6 +5,6 @@
         <order_date>[iai:order_date]</order_date>
         <comments><![CDATA[ [iai:delivery_note] ]]></comments>
         <order_worth>[iai:order_worth]</order_worth>
-        <delivery_type>MORNING</delivery_type>
+        <zone>MORNING</zone>
     </additional_parameters>
 </manifest>
